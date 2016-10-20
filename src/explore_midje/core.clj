@@ -1,11 +1,11 @@
 (ns explore-midje.core)
 
-(defn manual-flatten [something]
-  (let [x  (first something)
-        xs (rest something)]
-    (cond (empty? something) nil
+(defn manual-flatten [array]
+  (let [x  (first array)
+        xs (rest array)]
+    (cond (empty? array) nil
           (sequential? x)
             (concat (manual-flatten x) (manual-flatten xs))
-          :else
+          (number? x)
             (cons x (manual-flatten xs)))))
 
