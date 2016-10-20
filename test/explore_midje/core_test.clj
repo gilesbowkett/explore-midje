@@ -4,6 +4,6 @@
             [clojure.string :as str]
             [explore-midje.core :refer :all]))
 
-(fact "`return-hi-world` returns 'hello world'"
-  (return-hi-world) => "hello world")
+(fact "`manual-flatten` manually flattens"
+  (manual-flatten [1 [2 3] 4]) => [1 2 3 4])
 

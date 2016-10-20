@@ -1,5 +1,5 @@
 (ns explore-midje.core)
 
-(defn return-hi-world []
-  "hello world")
+(defn manual-flatten [structure]
+  (flatten structure))
 
