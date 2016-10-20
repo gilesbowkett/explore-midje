@@ -3,7 +3,7 @@
   (:require [clojure.test :refer :all]
             [explore-midje.core :refer :all]))
 
-(fact "`manual-flatten` manually flattens arrays"
+(fact "`manual-flatten` manually flattens vectors"
   (manual-flatten [1 [2 3] 4]) => [1 2 3 4]
   (manual-flatten [1 [2 [3 [4]]]]) => [1 2 3 4]
   (manual-flatten [1]) => [1])
